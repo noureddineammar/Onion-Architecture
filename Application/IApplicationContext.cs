@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace Application
 {
-    public interface IApplicationDbContext
+    public interface IApplicationContext
     {
         DbSet<Product> Products { get; set; }
+
         Task<int> SaveChanges();
     }
 }
