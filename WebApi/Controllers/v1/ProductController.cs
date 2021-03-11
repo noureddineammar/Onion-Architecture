@@ -12,7 +12,6 @@ using Application.Helpers;
 
 namespace WebApi.Controllers.v1
 {
-    [ApiVersion("1.0")]
     public class ProductController : BaseApiController<ProductController>
     {
 
