@@ -47,7 +47,9 @@ namespace WebApi
             //User Manager Service
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationContext>();
             services.AddScoped<IUserService, UserService>();
-
+            // Add application services.
+            services.AddTransient<ISmsSender, SmsSender>();
+            services.Configure<SMSoptions>(Configuration);
 
             #region Api Versioning
 
